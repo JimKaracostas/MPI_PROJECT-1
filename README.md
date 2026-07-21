@@ -1,5 +1,5 @@
 <h1 align="center">
-  MPI Vector Statistics 🧮
+  MPI Vector Statistics
 </h1>
 
 <p align="center">
