@@ -1,4 +1,17 @@
-# MPI Parallel Vector Statistics
+<h1 align="center">
+  MPI Vector Statistics 🧮
+</h1>
+
+<p align="center">
+  <strong>A parallel computing assignment implementing statistical calculations on a vector using MPI.</strong>
+</p>
+
+<p align="center">
+  <img alt="C" src="https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white">
+  <img alt="MPI" src="https://img.shields.io/badge/MPI-Parallel_Computing-blue">
+</p>
+
+<hr>
 
 A parallel computing assignment implementing statistical calculations on a vector using **MPI (Message Passing Interface)** in C.
 
@@ -15,7 +28,7 @@ This program processes an input vector $X$ of size $n$ using $p$ processors. It 
 
 This implementation strictly adheres to the following assignment constraints:
 * **Point-to-Point Communication Only:** Collective functions (like `MPI_Scatter`, `MPI_Reduce`, `MPI_Bcast`) are **not** used. Instead, manual implementations using `MPI_Send` and `MPI_Recv` are employed.
-* **Memory Management:** Each processor only allocates memory for the portion of data it processes (Local $X$, Local $\delta$)[cite: 16]. The Master node (Rank 0) handles I/O and final result aggregation.
+* **Memory Management:** Each processor only allocates memory for the portion of data it processes (Local $X$, Local $\delta$). The Master node (Rank 0) handles I/O and final result aggregation.
 * **Load Balancing:** The code dynamically calculates the load distribution to handle cases where the vector size $n$ is not perfectly divisible by the number of processors $p$.
 * **Menu System:** The program runs in a loop, offering a menu to Continue or Exit.
 
@@ -46,3 +59,4 @@ Open your terminal and compile the code using `mpicc`:
 
 ```bash
 mpicc main.c -o mpi_stats -lm
+```
